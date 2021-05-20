@@ -1,0 +1,8 @@
+org/schlarb/models/Artist.java
+ org.schlarb.models.Artist
+org/schlarb/models/User.java
+ org.schlarb.models.User
+org/schlarb/Server.java
+ org.schlarb.Server
+org/schlarb/models/Event.java
+ org.schlarb.models.Event
