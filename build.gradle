@@ -29,3 +29,12 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+//jar {
+//    manifest {
+//        attributes(
+//                'Server':
+//    }
+//}
+task makeSchlarbServer{
+
+}
