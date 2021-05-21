@@ -36,6 +36,7 @@ jar {
         )
     }
 }
+//might need a build task to make this build dependencies before trying to mak jar file!
 task runjar(type: JavaExec){
     main = 'org.schlarb.Server'
     classpath = sourceSets.main.runtimeClasspath
@@ -43,4 +44,9 @@ task runjar(type: JavaExec){
 task runSchlarbServer(dependsOn:['test', 'runjar']){
 //    lets try this...
 
+}
+task hello{
+    doLast {
+        println 'hello jenkins'
+    }
 }
