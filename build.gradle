@@ -26,11 +26,7 @@ dependencies {
     dependencies { testImplementation "org.mockito:mockito-core:3.+" }
 }
 apply plugin: 'java'
-hello{
-    doLast{
-        println 'hello world'
-    }
-}
+
 test {
     useJUnitPlatform()
 }
@@ -46,7 +42,7 @@ task runjar(type: JavaExec){
     main = 'org.schlarb.Server'
     classpath = sourceSets.main.runtimeClasspath
 }
-task runSchlarbServer(dependsOn:['hello', 'test', 'runjar']){
+task runSchlarbServer(dependsOn:[ 'hello', 'test', 'runjar']){
 //    lets try this...
 
 }
