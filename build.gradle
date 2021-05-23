@@ -25,7 +25,29 @@ dependencies {
     repositories { jcenter() }
     dependencies { testImplementation "org.mockito:mockito-core:3.+" }
 }
+apply plugin: 'java'
 
 test {
     useJUnitPlatform()
+}
+jar {
+    manifest {
+        attributes(
+                'Main-Class':'org.schlarb.Server'
+        )
+    }
+}
+//might need a build task to make this build dependencies before trying to mak jar file!
+task runjar(type: JavaExec){
+    main = 'org.schlarb.Server'
+    classpath = sourceSets.main.runtimeClasspath
+}
+task runSchlarbServer(dependsOn:[ 'hello', 'test', 'runjar']){
+//    lets try this...
+
+}
+task hello{
+    doLast {
+        println 'hello jenkins'
+    }
 }
