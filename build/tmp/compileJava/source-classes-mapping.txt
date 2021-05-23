@@ -1,10 +1,12 @@
+org/schlarb/models/Event.java
+ org.schlarb.models.Event
 org/schlarb/models/Artist.java
  org.schlarb.models.Artist
 org/schlarb/models/User.java
  org.schlarb.models.User
-org/schlarb/models/Event.java
- org.schlarb.models.Event
-org/schlarb/Server.java
- org.schlarb.Server
 org/schlarb/service/ServiceLayer.java
  org.schlarb.service.ServiceLayer
+org/schlarb/utility/Utility.java
+ org.schlarb.utility.Utility
+org/schlarb/Server.java
+ org.schlarb.Server
