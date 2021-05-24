@@ -18,7 +18,7 @@
             stage('Deploy'){
                 steps {
                     echo 'Deploying...'
-                    sh 'gradle runJar'
+                    sh '~/.sdkman/candidates/gradle/current/bin/gradle runJar'
                 }
             }
         }
