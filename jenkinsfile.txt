@@ -18,7 +18,7 @@
             stage('Deploy'){
                 steps {
                     echo 'Deploying...'
-                    sh '/var/lib/jenkins/workspace/Buttfuck/gradlew runJar'
+                    sh 'gradle runJar'
                 }
             }
         }
