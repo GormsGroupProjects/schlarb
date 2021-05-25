@@ -20,7 +20,7 @@ pipeline{
                 script {
                  try {
                         //sh 'chmod +x gradlew'
-                        sh './gradlew test jacocoTestReport --no-daemon'
+                        sh './gradlew test jacocoTestReport'
                     } finally {
                         junit '**/build/test-results/test/*.xml' 
                         //make the junit test results available in any case (success & failure)
