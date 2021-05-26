@@ -4,9 +4,7 @@ pipeline{
     stages{
         stage('Load environment variables') {
             steps {
-                step {
-                    sh 'source env.variables'
-                }
+                sh 'source env.variables'
             }
         }
         stage('Build'){
