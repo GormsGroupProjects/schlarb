@@ -22,15 +22,16 @@ pipeline{
         stage('Test'){
             steps {
                 echo '>>>>>>>>>>>>> Testing...'
-                script {
-                 try {
-                        //sh 'chmod +x gradlew'
-                        sh './gradlew test jacocoTestReport'
-                    } finally {
-                        junit '**/build/test-results/test/*.xml' 
-                        //make the junit test results available in any case (success & failure)
-                    }
-                }
+                jacoco()
+//                script {
+//                 try {
+//                        //sh 'chmod +x gradlew'
+//                        sh './gradlew test jacocoTestReport'
+//                    } finally {
+//                        junit '**/build/test-results/test/*.xml' 
+//                        //make the junit test results available in any case (success & failure)
+//                    }
+//                }
             }
         }
         stage('Deploy'){
