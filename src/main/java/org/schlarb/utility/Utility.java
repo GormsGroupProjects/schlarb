@@ -1,6 +1,7 @@
 package org.schlarb.utility;
 
 public class Utility {
+    private Utility() {}
     public static void printMethodName() {
         StackTraceElement[] stackTrace = new Throwable().getStackTrace();
         System.out.println(stackTrace[1].getClassName() + "." + stackTrace[1].getMethodName());

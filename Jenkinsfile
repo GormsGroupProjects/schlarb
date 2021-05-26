@@ -11,9 +11,11 @@ pipeline{
         stage('Build'){
             steps{
                 echo '>>>>>>>>>>>>> Building...'
-                //echo '------ DEBUG'
-                //echo '------------'
+                echo '------ DEBUG'
+                sh 'echo WORKSPACE: $WORKSPACE'
+                echo '------------'
                 echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
+                sh 'chmod u+x /var/lib/jenkins/workspace/Backend/gradlew'
                 sh '/var/lib/jenkins/workspace/Backend/gradlew build'
             }
         }
