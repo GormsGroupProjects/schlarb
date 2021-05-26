@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 update-jenkinsfile
 .jenkinsfile.txt.swp
+=======
+build/
+>>>>>>> 2e4f0187988e280803e0cb3cc9b2ffd4d5127e29
