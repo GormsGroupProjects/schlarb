@@ -7,9 +7,5 @@ Z
 +src/main/java/org/schlarb/models/Event.java,5\6\562b051f19366c066d8fdd86bd25c54111bdf730
 \
 ,src/main/java/org/schlarb/models/Artist.java,c\e\ce8e80e763db27d21ede9031095e204df2d4d4e0
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 U
 %src/main/java/org/schlarb/Server.java,4\6\4625c7069ce255bff9aa5b45dd9d5a7c03434a03
-?
-jenkinsfile.txt,3\0\30b7d3b5412d527a106ebcd798910d7cfc0b7023
