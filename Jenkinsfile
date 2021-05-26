@@ -11,12 +11,12 @@ pipeline{
         stage('Build'){
             steps{
                 echo '>>>>>>>>>>>>> Building...'
-                echo '------ DEBUG'
-                sh 'echo WORKSPACE: $WORKSPACE'
-                echo '------------'
+//                 echo '------ DEBUG'
+//                 sh 'echo WORKSPACE: $WORKSPACE'
+//                 echo '------------'
                 echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
-                sh 'chmod u+x /var/lib/jenkins/workspace/Backend/gradlew'
-                sh '/var/lib/jenkins/workspace/Backend/gradlew build'
+                sh 'chmod u+x $WORKSPACE/gradlew'
+                sh '$WORKSPACE/gradlew build'
             }
         }
         stage('Test'){
@@ -37,7 +37,7 @@ pipeline{
         stage('Deploy'){
             steps {
                 echo '>>>>>>>>>>>>> Deploying...'
-                sh '/var/lib/jenkins/workspace/Backend/gradlew runJar'
+                sh '$WORKSPACE/gradlew runJar'
             }
         }
     }
