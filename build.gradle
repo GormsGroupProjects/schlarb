@@ -9,12 +9,14 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     //came from new project
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation "org.mockito:mockito-core:3.+"
     //imported from gorms projectOne
     implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
@@ -23,9 +25,6 @@ dependencies {
     compile "org.slf4j:slf4j-simple:1.8.0-beta4"
     compile "com.fasterxml.jackson.core:jackson-databind:2.10.3"
     implementation 'org.json:json:20171018'
-    //mockito
-    repositories { jcenter() }
-    dependencies { testImplementation "org.mockito:mockito-core:3.+" }
 }
 
 test {
