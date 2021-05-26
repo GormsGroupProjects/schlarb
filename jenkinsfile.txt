@@ -2,12 +2,12 @@ pipeline{
     agent any
 
     stages{
-        stage('Load environment variables') {
-            steps {
-                echo '>>>>>>>>>>>>> Loading environment variables...'
-                sh 'source $JENKINS_HOME/env.variables'
-            }
-        }
+//        stage('Load environment variables') {
+//            steps {
+//                echo '>>>>>>>>>>>>> Loading environment variables...'
+//                sh 'source $JENKINS_HOME/env.variables'
+//            }
+//        }
         stage('Build'){
             steps{
                 echo '>>>>>>>>>>>>> Building...'
