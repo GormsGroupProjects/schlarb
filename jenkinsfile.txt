@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Load environment variables') {
             steps {
-                sh 'source env.variables'
+                sh 'source $JENKINS_HOME/env.variables'
             }
         }
         stage('Build'){
