@@ -1,12 +1,20 @@
-org/schlarb/utility/Utility.java
- org.schlarb.utility.Utility
-org/schlarb/models/Artist.java
- org.schlarb.models.Artist
-org/schlarb/models/User.java
- org.schlarb.models.User
-org/schlarb/Server.java
- org.schlarb.Server
-org/schlarb/service/ServiceLayer.java
- org.schlarb.service.ServiceLayer
-org/schlarb/models/Event.java
- org.schlarb.models.Event
+org/schlarb/SchlarbApplication.java
+ org.schlarb.SchlarbApplication
+org/schlarb/service/Impl/UserSearchServiceImp.java
+ org.schlarb.service.Impl.UserSearchServiceImp
+org/schlarb/config/SchlarbConfiguration.java
+ org.schlarb.config.SchlarbConfiguration
+org/schlarb/exception/SchlarbException.java
+ org.schlarb.exception.SchlarbException
+org/schlarb/model/Artist.java
+ org.schlarb.model.Artist
+org/schlarb/service/UserSearchService.java
+ org.schlarb.service.UserSearchService
+org/schlarb/service/UserCrudService.java
+ org.schlarb.service.UserCrudService
+org/schlarb/service/Impl/UserCrudServiceImp.java
+ org.schlarb.service.Impl.UserCrudServiceImp
+org/schlarb/model/User.java
+ org.schlarb.model.User
+org/schlarb/repository/UserRepository.java
+ org.schlarb.repository.UserRepository
