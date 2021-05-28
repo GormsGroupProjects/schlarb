@@ -5,12 +5,10 @@ import org.schlarb.model.User;
 public interface UserCrudService {
 		
 		public User addUser(User user);
-
-		User updateUser(User user);
-
-		User getUserByUserName(User user);
-
-		void deleteUser(User user);
+		public User updateUser(User user);
+		public User getUserByUserName(User user);
+		public User getUserByUserId(int userId);
+		public void deleteUser(int userId);
 	
 	}
 

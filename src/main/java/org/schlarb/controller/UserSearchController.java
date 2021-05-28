@@ -45,4 +45,10 @@ public class UserSearchController implements UserSearchService {
 		return userSearchService.getUserByEmail(email);
 	}
 
+	@GetMapping("/user/userId/{userId}")
+	public List<User> getUserByUserId(int userId) {
+		// TODO Auto-generated method stub
+		return userSearchService.getUserByUserId(userId);
+	}
+
 }

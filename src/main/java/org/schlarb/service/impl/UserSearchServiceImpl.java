@@ -21,6 +21,13 @@ public class UserSearchServiceImpl implements UserSearchService {
 		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
+	
+
+	@Override
+	public List<User> getUserByUserId(int userId) {
+		// TODO Auto-generated method stub
+		return userRepository.findByUserId(userId);
+	}
 
 	@Override
 	public List<User> getUserByUserName(String userName) {
@@ -45,5 +52,6 @@ public class UserSearchServiceImpl implements UserSearchService {
 		// TODO Auto-generated method stub
 		return userRepository.findByUserEmail(email);
 	}
+
 
 }

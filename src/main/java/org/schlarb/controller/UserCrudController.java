@@ -27,16 +27,16 @@ public class UserCrudController  {
 		return userCrudService.updateUser(user);
 	}
 
-	@GetMapping("/user") //{id}pathvariables.
-	public User getUserByUserName(User user) {
+	@GetMapping("/user/{userId}") 
+	public User getUserByUserId(int userId) {
 		// TODO Auto-generated method stub
-		return userCrudService.getUserByUserName(user);
+		return userCrudService.getUserByUserId(userId);
 	}
 
-	@DeleteMapping ("/user") //{id}pathvariables.
-	public void deleteUser(User user) {
+	@DeleteMapping ("/user/{userId}") 
+	public void deleteUser(int userId) {
 		// TODO Auto-generated method stub
-		userCrudService.deleteUser(user);
+		userCrudService.deleteUser(userId);
 		
 	}
 
