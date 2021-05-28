@@ -7,12 +7,15 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
 apply plugin: 'java'
 
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+        }
 
     repositories {
         mavenCentral()
@@ -60,13 +63,13 @@ configurations {
         }
     }
 
-	
-	jacoco {
-	    toolVersion = '0.8.5'
-	    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
-	    // https://docs.gradle.org/current/userguide/jacoco_plugin.html
-	    // Gradle default for reports Directory is $buildDir/reports/jacoco
-	}
+
+    jacoco {
+        toolVersion = '0.8.6'
+        reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+        // https://docs.gradle.org/current/userguide/jacoco_plugin.html
+        // Gradle default for reports Directory is $buildDir/reports/jacoco
+    }
 
     test {
         jacoco {
@@ -89,4 +92,4 @@ configurations {
         classpath = sourceSets.main.runtimeClasspath
     }
 
-}
+

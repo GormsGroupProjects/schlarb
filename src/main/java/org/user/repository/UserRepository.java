@@ -2,6 +2,7 @@ package org.user.repository;
 
 import org.schlarb.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,4 +15,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 	public List<User> findByUserLastName(String lastName);
 	public List<User> findByUserEmail(String email);
 
+//	@Query("select * from User")
+//	public List<User> getUser;
+	
 }
