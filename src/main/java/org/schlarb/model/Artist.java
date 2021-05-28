@@ -1,4 +1,4 @@
-package org.schlarb.models;
+package org.schlarb.model;
 
 public class Artist {
     private int Id;
