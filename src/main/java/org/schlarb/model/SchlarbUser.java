@@ -4,6 +4,8 @@ package org.schlarb.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
@@ -25,6 +27,8 @@ public class SchlarbUser {
     private String lastName;
     private String password;
     private String email;
+//    @ManyToMany(mappedBy = "Artist")
+//    private List<Artist> artistList = new ArrayList<>(); //is there a better way?
 
     //users should have a list of artists saved...
     //username, firstname, lastname, password, email

@@ -18,6 +18,9 @@ public class UserSearchController {
     public String noThanks(){
         return "This is not that type of server, kindly bugger off.";
     }
+    //need to write a function to get by userId and PW...
+
+
 
 
 }

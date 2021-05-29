@@ -1,5 +1,5 @@
-org/schlarb/model/Artist.java
- org.schlarb.model.Artist
+org/schlarb/service/Impl/UserSearchServiceImp.java
+ org.schlarb.service.Impl.UserSearchServiceImp
 org/schlarb/SchlarbApplication.java
  org.schlarb.SchlarbApplication
 org/schlarb/config/SchlarbConfiguration.java
@@ -10,16 +10,22 @@ org/schlarb/controller/ArtistController.java
  org.schlarb.controller.ArtistController
 org/schlarb/repository/UserRepository.java
  org.schlarb.repository.UserRepository
-org/schlarb/controller/UserSearchController.java
- org.schlarb.controller.UserSearchController
-org/schlarb/service/Impl/UserSearchServiceImp.java
- org.schlarb.service.Impl.UserSearchServiceImp
 org/schlarb/service/UserSearchService.java
  org.schlarb.service.UserSearchService
+org/schlarb/model/Artist.java
+ org.schlarb.model.Artist
+org/schlarb/controller/UserSearchController.java
+ org.schlarb.controller.UserSearchController
+org/schlarb/service/Impl/ArtistServiceImp.java
+ org.schlarb.service.Impl.ArtistServiceImp
 org/schlarb/controller/UserCrudController.java
  org.schlarb.controller.UserCrudController
 org/schlarb/model/SchlarbUser.java
  org.schlarb.model.SchlarbUser
+org/schlarb/repository/ArtistRepository.java
+ org.schlarb.repository.ArtistRepository
+org/schlarb/service/ArtistService.java
+ org.schlarb.service.ArtistService
 org/schlarb/service/UserCrudService.java
  org.schlarb.service.UserCrudService
 org/schlarb/service/Impl/UserCrudServiceImp.java
