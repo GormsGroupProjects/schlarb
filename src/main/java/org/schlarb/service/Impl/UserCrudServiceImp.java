@@ -16,16 +16,16 @@ import java.util.Optional;
 public class UserCrudServiceImp implements UserCrudService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository schlarbUserRepository;
 
     public User addUser(User user){
-        return userRepository.save(user);
+        return schlarbUserRepository.save(user);
     }
     public User update(User user){
-        return userRepository.save(user);
+        return schlarbUserRepository.save(user);
     }
     public User getUserById(int id){
-        Optional<User> optional = userRepository.findById(id);
+        Optional<User> optional = schlarbUserRepository.findById(id);
         if (optional.isPresent()){
             return optional.get();
         }

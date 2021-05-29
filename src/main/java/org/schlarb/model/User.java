@@ -22,7 +22,7 @@ public class User {
     @Id
     @GeneratedValue
     private int id;
-    private String name;
+//    private String name;
     private String username;
     private String firstName;
     private String lastName;

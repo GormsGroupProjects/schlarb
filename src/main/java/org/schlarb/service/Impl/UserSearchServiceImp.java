@@ -12,16 +12,16 @@ import java.util.List;
 @Service
 public class UserSearchServiceImp implements UserSearchService {
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository schlarbUserRepository;
 
     @Override
     public List<User> getAllUsers()
     {
-        return userRepository.findAll();
+        return schlarbUserRepository.findAll();
     }
     @Override
     public List<User> getUsersByName(String name){
-        return userRepository.findByName(name);
+        return schlarbUserRepository.findByUsername(name);
     }
 //    public List<User> getUsersByArtist(Artist artist) {
 //        return userRepository.findByArtist(Artist artist);
