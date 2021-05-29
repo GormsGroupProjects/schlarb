@@ -1,5 +1,5 @@
-org/schlarb/repository/UserRepository.java
- org.schlarb.repository.UserRepository
+org/schlarb/controller/UserCrudController.java
+ org.schlarb.controller.UserCrudController
 org/schlarb/SchlarbApplication.java
  org.schlarb.SchlarbApplication
 org/schlarb/config/SchlarbConfiguration.java
@@ -22,5 +22,5 @@ org/schlarb/service/UserSearchService.java
  org.schlarb.service.UserSearchService
 org/schlarb/service/Impl/UserCrudServiceImp.java
  org.schlarb.service.Impl.UserCrudServiceImp
-org/schlarb/controller/UserCrudController.java
- org.schlarb.controller.UserCrudController
+org/schlarb/repository/UserRepository.java
+ org.schlarb.repository.UserRepository
