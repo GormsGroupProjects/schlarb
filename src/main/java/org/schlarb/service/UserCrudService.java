@@ -1,14 +1,12 @@
 package org.schlarb.service;
 
-import org.schlarb.model.User;
-
-import java.util.Optional;
+import org.schlarb.model.SchlarbUser;
 
 public interface UserCrudService {
     //I do not think I need an artist searchService...
-    public User addUser(User user);
-    public User update(User user);
-    public User getUserById(int id);
+    public SchlarbUser addUser(SchlarbUser user);
+    public SchlarbUser update(SchlarbUser user);
+    public SchlarbUser getUserById(int id);
     public void deleteUser(int id);
 
 }

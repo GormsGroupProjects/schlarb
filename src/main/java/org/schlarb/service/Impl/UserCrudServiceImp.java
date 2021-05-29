@@ -1,7 +1,7 @@
 package org.schlarb.service.Impl;
 
 import org.schlarb.exception.SchlarbException;
-import org.schlarb.model.User;
+import org.schlarb.model.SchlarbUser;
 import org.schlarb.repository.UserRepository;
 import org.schlarb.service.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,14 @@ public class UserCrudServiceImp implements UserCrudService {
     @Autowired
     private UserRepository schlarbUserRepository;
 
-    public User addUser(User user){
+    public SchlarbUser addUser(SchlarbUser user){
         return schlarbUserRepository.save(user);
     }
-    public User update(User user){
+    public SchlarbUser update(SchlarbUser user){
         return schlarbUserRepository.save(user);
     }
-    public User getUserById(int id){
-        Optional<User> optional = schlarbUserRepository.findById(id);
+    public SchlarbUser getUserById(int id){
+        Optional<SchlarbUser> optional = schlarbUserRepository.findById(id);
         if (optional.isPresent()){
             return optional.get();
         }

@@ -1,7 +1,7 @@
 package org.schlarb.service.Impl;
 
 
-import org.schlarb.model.User;
+import org.schlarb.model.SchlarbUser;
 import org.schlarb.repository.UserRepository;
 import org.schlarb.service.UserSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,12 @@ public class UserSearchServiceImp implements UserSearchService {
     private UserRepository schlarbUserRepository;
 
     @Override
-    public List<User> getAllUsers()
+    public List<SchlarbUser> getAllUsers()
     {
         return schlarbUserRepository.findAll();
     }
     @Override
-    public List<User> getUsersByName(String name){
+    public List<SchlarbUser> getUsersByName(String name){
         return schlarbUserRepository.findByUsername(name);
     }
 //    public List<User> getUsersByArtist(Artist artist) {
