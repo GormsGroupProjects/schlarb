@@ -27,17 +27,11 @@ public class User {
     private String lastName;
     private String password;
     private String email;
-//    @ManyToMany(mappedBy = "user", fetch = FetchType.EAGER)
 
-//    @JoinTable(name = )
-
-//    @ManyToMany(mappedBy = "name")
-//    private List<Artist> artistList = new ArrayList<>(); //is there a better way?
-
-    //users should have a list of artists saved...
-    //username, firstname, lastname, password, email
-
-
+    @ManyToMany
+//            (mappedBy = "name")
+    private List<Artist> artistList; //is there a better way?
+    //do I need eager loading?
 
 }
 
