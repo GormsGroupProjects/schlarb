@@ -15,9 +15,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Artist {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Id //test this to see if it works...
     private String name;
     private String url;
     private String image_url;

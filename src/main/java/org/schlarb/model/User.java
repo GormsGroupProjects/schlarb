@@ -17,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class SchlarbUser {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -27,7 +27,11 @@ public class SchlarbUser {
     private String lastName;
     private String password;
     private String email;
-//    @ManyToMany(mappedBy = "Artist")
+//    @ManyToMany(mappedBy = "user", fetch = FetchType.EAGER)
+
+//    @JoinTable(name = )
+
+//    @ManyToMany(mappedBy = "name")
 //    private List<Artist> artistList = new ArrayList<>(); //is there a better way?
 
     //users should have a list of artists saved...
