@@ -34,4 +34,23 @@ public class UserCrudController {
 //
 //    @DeleteMapping
 
+//    @PostMapping("/login")
+//    //this needs to take a username and pw...
+//    //and return full user (no pw?)
+//    public User loginUser(String username, String password){
+//
+//        //i could get by username, then get by pw...
+//        //
+//    }
+
+//
+//    public User addUser(@RequestBody User user){
+////        return userCrudService.addUser(user);
+//        User resUser = userCrudService.addUser(user);
+//        resUser.setPassword(null); //this works, thanks to lombok
+//        //disregard the above red text!!!
+//        return resUser;
+//    }
+
+
 }

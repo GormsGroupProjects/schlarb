@@ -34,7 +34,7 @@ public class UserCrudServiceImp implements UserCrudService {
         }
     }
     public void deleteUser(int id){
-
+        schlarbUserRepository.deleteById(id);
     }
 
 }
