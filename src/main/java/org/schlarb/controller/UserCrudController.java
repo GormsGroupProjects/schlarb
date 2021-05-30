@@ -6,7 +6,7 @@ import org.schlarb.service.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class UserCrudController {
 
@@ -30,7 +30,7 @@ public class UserCrudController {
 //    }
     
     @PostMapping("/user")
-	public User addUser(User user) {
+	public User addUser(@RequestBody User user) {
 		// TODO Auto-generated method stub
 		return userCrudService.addUser(user);
 	}

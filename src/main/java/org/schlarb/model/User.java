@@ -9,13 +9,13 @@ import java.util.List;
 
 @Entity
 @Table
-@Getter
-@Setter
+//@Getter
+//@Setter
 @Data
-@ToString
-@EqualsAndHashCode
+//@ToString
+//@EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 
 public class User {
     @Id
