@@ -29,9 +29,23 @@ public class User {
     private String email;
 
     @ManyToMany
-//            (mappedBy = "name")
     private List<Artist> artistList; //is there a better way?
-    //do I need eager loading?
+
+    public void setPassword(String pw){ //
+                this.password = pw;
+    }
+    public String getPassword(){
+        return this.password;
+    }
+    public String getUsername(){
+        return this.username;
+    }
+    public User(String username, String password) {
+        this.password = password;
+        this.username = username;
+    } //needed to deserialize the userObject for login
+
+
 
 }
 

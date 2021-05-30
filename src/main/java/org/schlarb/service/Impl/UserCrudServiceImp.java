@@ -21,7 +21,7 @@ public class UserCrudServiceImp implements UserCrudService {
     public User addUser(User user){
         return schlarbUserRepository.save(user);
     }
-    public User update(User user){
+    public User updateUser(User user){
         return schlarbUserRepository.save(user);
     }
     public User getUserById(int id){

@@ -1,11 +1,12 @@
 package org.schlarb.controller;
 
 
+import org.schlarb.model.User;
 import org.schlarb.service.UserSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -15,12 +16,56 @@ public class UserSearchController {
 
     //use mostly for username?
     @GetMapping("/")
-    public String noThanks(){
+    public String noThanks() {
         return "This is not that type of server, kindly bugger off.";
     }
     //need to write a function to get by userId and PW...
 
+    @GetMapping("/user/username/{username}")   //returns user info
+    public User getUserByUserId(String username) {
+        User resUser = userSearchService.getUserByUsername(username);
+        resUser.setPassword(null);
+        return resUser;
+    }
 
 
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        // TODO Auto-generated method stub
+        return userSearchService.getAllUsers();
+    }
 
+
+    //WIP ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @PostMapping("/login")
+    public User addUser(@RequestBody User user) {  //requires constructor!
+        //call login function
+        //needs try-catch... error handling should use advice though...
+        User reqUser = userSearchService.loginUser(user.getUsername(), user.getPassword());
+        //if this goes badly, must throw error
+        //else return user
+        return user;
+    }
 }
+
+//
+//    @GetMapping("/user/firstName/{firstName}")
+//    public List<User> getUserByFirstName(@PathVariable String firstName) {
+//        // TODO Auto-generated method stub
+//        return userSearchService.getUserByFirstName(firstName);
+//    }
+//
+//    @GetMapping("/user/lastName/{lastName}")
+//    public List<User> getUserByLastName(@PathVariable String lastName) {
+//        // TODO Auto-generated method stub
+//        return userSearchService.getUserByLastName(lastName);
+//    }
+//
+//    @GetMapping("/user/email/{email}")
+//    public List<User> getUserByEmail(@PathVariable String email) {
+//        // TODO Auto-generated method stub
+//        return userSearchService.getUserByEmail(email);
+//    }
+//
+
+

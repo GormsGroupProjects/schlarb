@@ -24,10 +24,40 @@ public class UserCrudController {
     public User addUser(@RequestBody User user){
 //        return userCrudService.addUser(user);
         User resUser = userCrudService.addUser(user);
-        resUser.setPassword(null); //this works, thanks to lombok
-        //disregard the above red text!!!
+        resUser.setPassword(null); //need to make sure lombok isnt conflicting with my setter
         return resUser;
     }
+
+
+    //needs pw auth... to dangerous to be implmented without some safeguard
+//    @PutMapping("/user")
+//    public User updateUser(User user) {
+//        User resUser = userCrudService.updateUser(user);
+//        resUser.setPassword(null); //lombok
+//        return resUser;
+//    }
+
+    @GetMapping("/user/id/{userId}")   //returns user info
+    public User getUserByUserId(int userId) {
+        // TODO Auto-generated method stub
+        User resUser = userCrudService.getUserById(userId);
+        resUser.setPassword(null); //need to make sure lombok isnt conflicting with my setter
+        return resUser;
+    }
+
+    //needs pw verification - too dangerous to implement without safeguard
+//    @DeleteMapping ("/user/{userId}")
+//    public void deleteUser(int userId) {
+//        // TODO Auto-generated method stub
+//        userCrudService.deleteUser(userId);
+//
+//    }
+
+
+
+
+
+
 //    @PutMapping
 //
 //    @PostMapping

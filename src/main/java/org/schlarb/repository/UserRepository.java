@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    public List<User> findByUsername(String name);
+    public User findByUsername(String name);
     //findBy each variable
     //findall is complaining... not written...
 }
