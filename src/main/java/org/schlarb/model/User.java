@@ -21,14 +21,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-//    private String name;
+    @Column(name="username", nullable = false)
     private String username;
     private String firstName;
     private String lastName;
     private String password;
     private String email;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Artist> artistList; //is there a better way?
 
     public void setPassword(String pw){ //
@@ -45,6 +45,17 @@ public class User {
         this.username = username;
     } //needed to deserialize the userObject for login
 
+    public void addArtist(Artist artist){
+        this.artistList.add(artist);
+    }
+    public boolean containsArtist(Artist artist){
+        if(this.artistList.contains(artist)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
 
 }

@@ -1,18 +1,23 @@
 package org.schlarb.controller;
 
 
+import org.schlarb.model.Artist;
 import org.schlarb.model.User;
+import org.schlarb.service.ArtistService;
 import org.schlarb.service.UserSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @CrossOrigin
 @RestController
 public class UserSearchController {
     @Autowired
     private UserSearchService userSearchService;
+    @Autowired
+    private ArtistService artistService;
 
     //use mostly for username?
     @GetMapping("/")
@@ -46,6 +51,34 @@ public class UserSearchController {
         //else return user
         return user;
     }
+
+
+    //working - broken!! //fixme
+    //add an artist
+    @PostMapping("/user/artist/username/{username}")
+    public User addArtistToUser(@RequestBody Artist artist, @PathVariable String username) {
+        User user = userSearchService.getUserByUsername(username);
+        System.out.println(user);
+        System.out.println(artist);
+        if (user.containsArtist(artist)){
+
+        }
+        else{
+            user.addArtist(artist);
+        }
+        //throw error would be nice... right?
+        return user;
+
+        /*
+        artist in body of postrequest
+        get user from db
+            - via username in uri
+        add artist to artistlist... if not there
+         */
+
+    }
+
+
 }
 
 //
