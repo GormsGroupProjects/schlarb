@@ -49,11 +49,10 @@ public class UserSearchController {
         User reqUser = userSearchService.loginUser(user.getUsername(), user.getPassword());
         //if this goes badly, must throw error
         //else return user
-        return user;
+        return reqUser;
     }
 
 
-    //working - broken!! //fixme
     //add an artist
     @PostMapping("/user/artist/username/{username}")
     public User addArtistToUser(@RequestBody Artist artist, @PathVariable String username) {
@@ -64,41 +63,16 @@ public class UserSearchController {
 
         }
         else{
+            artistService.addArtist(artist);
             user.addArtist(artist);
         }
-        //throw error would be nice... right?
         return user;
 
-        /*
-        artist in body of postrequest
-        get user from db
-            - via username in uri
-        add artist to artistlist... if not there
-         */
 
     }
 
 
 }
 
-//
-//    @GetMapping("/user/firstName/{firstName}")
-//    public List<User> getUserByFirstName(@PathVariable String firstName) {
-//        // TODO Auto-generated method stub
-//        return userSearchService.getUserByFirstName(firstName);
-//    }
-//
-//    @GetMapping("/user/lastName/{lastName}")
-//    public List<User> getUserByLastName(@PathVariable String lastName) {
-//        // TODO Auto-generated method stub
-//        return userSearchService.getUserByLastName(lastName);
-//    }
-//
-//    @GetMapping("/user/email/{email}")
-//    public List<User> getUserByEmail(@PathVariable String email) {
-//        // TODO Auto-generated method stub
-//        return userSearchService.getUserByEmail(email);
-//    }
-//
 
 

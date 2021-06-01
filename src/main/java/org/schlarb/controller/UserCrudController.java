@@ -24,7 +24,7 @@ public class UserCrudController {
     public User addUser(@RequestBody User user){
 //        return userCrudService.addUser(user);
         User resUser = userCrudService.addUser(user);
-        resUser.setPassword(null); //need to make sure lombok isnt conflicting with my setter
+//        resUser.setPassword(null); //need to make sure lombok isnt conflicting with my setter
         return resUser;
     }
 
@@ -41,7 +41,7 @@ public class UserCrudController {
     public User getUserByUserId(int userId) {
         // TODO Auto-generated method stub
         User resUser = userCrudService.getUserById(userId);
-        resUser.setPassword(null); //need to make sure lombok isnt conflicting with my setter
+//        resUser.setPassword(null); //need to make sure lombok isnt conflicting with my setter
         return resUser;
     }
 

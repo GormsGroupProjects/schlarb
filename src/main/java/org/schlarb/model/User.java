@@ -27,6 +27,7 @@ public class User {
     private String lastName;
     private String password;
     private String email;
+    private int numArtists=0;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Artist> artistList; //is there a better way?
@@ -47,14 +48,17 @@ public class User {
 
     public void addArtist(Artist artist){
         this.artistList.add(artist);
+        this.numArtists++;
+        //needs testing
     }
-    public boolean containsArtist(Artist artist){
-        if(this.artistList.contains(artist)){
-            return true;
+    public boolean containsArtist(Artist artist) {
+        for (int i = 0; i< numArtists;i++){
+            if(this.artistList.get(i).equals(artist)){
+                return true;
+            }
         }
-        else{
-            return false;
-        }
+        return false;
+
     }
 
 
