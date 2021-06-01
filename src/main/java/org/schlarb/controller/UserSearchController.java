@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @CrossOrigin
 @RestController
@@ -65,10 +64,9 @@ public class UserSearchController {
         else{
             artistService.addArtist(artist);
             user.addArtist(artist);
+            //fixme artists not connected to users
         }
         return user;
-
-
     }
 
 
