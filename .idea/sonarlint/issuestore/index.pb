@@ -6,12 +6,8 @@ i
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-;
-Jenkinsfile,0\c\0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
 7
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 d
 4src/main/java/org/schlarb/service/ArtistService.java,f\a\faadf5398732a6a241b2dd367bbddfcfda380dd4
 j
@@ -26,3 +22,5 @@ a
 1src/main/java/org/schlarb/SchlarbApplication.java,e\8\e855d6330544eb4481c44d957386d74ba80a580e
 p
 @src/main/java/org/schlarb/service/Impl/UserSearchServiceImp.java,e\e\ee70b71e8e92412ab407c9f907033224287aaae1
+;
+Jenkinsfile,0\c\0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520

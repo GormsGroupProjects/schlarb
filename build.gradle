@@ -84,7 +84,7 @@ test {
 jar {
 	manifest {
 		attributes(
-				'Main-Class': 'org.schlarb.Server'
+				'Main-Class': 'org.schlarb.ScharbApplication'
 		)
 	}
 }
