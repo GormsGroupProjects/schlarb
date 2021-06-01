@@ -4,6 +4,7 @@ package org.schlarb.controller;
 import org.schlarb.model.Artist;
 import org.schlarb.model.User;
 import org.schlarb.service.ArtistService;
+import org.schlarb.service.UserCrudService;
 import org.schlarb.service.UserSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,8 @@ import java.util.List;
 public class UserSearchController {
     @Autowired
     private UserSearchService userSearchService;
+    @Autowired
+    private UserCrudService userCrudService;
     @Autowired
     private ArtistService artistService;
 
@@ -64,6 +67,7 @@ public class UserSearchController {
         else{
             artistService.addArtist(artist);
             user.addArtist(artist);
+            userCrudService.updateUser(user);
             //fixme artists not connected to users
         }
         return user;
